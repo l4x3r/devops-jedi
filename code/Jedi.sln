@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jedi.Web", "Jedi.Web\Jedi.Web.csproj", "{95831F1C-8C8A-450F-85C9-82C02ECCC3F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jedi.UnitTests", "Jedi.UnitTests\Jedi.UnitTests.csproj", "{3D1E678A-F184-44C8-9E0A-2A10162D1D0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,17 @@ Global
 		{95831F1C-8C8A-450F-85C9-82C02ECCC3F0}.Release|x64.Build.0 = Release|Any CPU
 		{95831F1C-8C8A-450F-85C9-82C02ECCC3F0}.Release|x86.ActiveCfg = Release|Any CPU
 		{95831F1C-8C8A-450F-85C9-82C02ECCC3F0}.Release|x86.Build.0 = Release|Any CPU
+		{3D1E678A-F184-44C8-9E0A-2A10162D1D0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D1E678A-F184-44C8-9E0A-2A10162D1D0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D1E678A-F184-44C8-9E0A-2A10162D1D0E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3D1E678A-F184-44C8-9E0A-2A10162D1D0E}.Debug|x64.Build.0 = Debug|Any CPU
+		{3D1E678A-F184-44C8-9E0A-2A10162D1D0E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3D1E678A-F184-44C8-9E0A-2A10162D1D0E}.Debug|x86.Build.0 = Debug|Any CPU
+		{3D1E678A-F184-44C8-9E0A-2A10162D1D0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D1E678A-F184-44C8-9E0A-2A10162D1D0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D1E678A-F184-44C8-9E0A-2A10162D1D0E}.Release|x64.ActiveCfg = Release|Any CPU
+		{3D1E678A-F184-44C8-9E0A-2A10162D1D0E}.Release|x64.Build.0 = Release|Any CPU
+		{3D1E678A-F184-44C8-9E0A-2A10162D1D0E}.Release|x86.ActiveCfg = Release|Any CPU
+		{3D1E678A-F184-44C8-9E0A-2A10162D1D0E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
