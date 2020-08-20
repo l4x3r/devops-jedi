@@ -3,6 +3,11 @@ a {
   color: #0366d6;
 }
 
+body {
+    background-color: black;
+    color: whitesmoke
+}
+
 code {
   color: #E01A76;
 }
@@ -11,4 +16,8 @@ code {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
+}
+
+.logo-container {
+    text-align: center;
 }

@@ -4,13 +4,19 @@
   word-break: break-all;
 }
 
+navbar {
+    background-color: black;
+}
+
 html {
-  font-size: 14px;
+    background-color: black;
+    font-size: 14px;
 }
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        background-color: black;
+        font-size: 16px;
+    }
 }
 
 .box-shadow {
