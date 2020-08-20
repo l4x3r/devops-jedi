@@ -14,7 +14,7 @@ export class FetchData extends Component {
 
   static renderForecastsTable(forecasts) {
     return (
-        <table className="table table-striped table-dark">
+      <table className="table table-striped table-dark">
         <thead>
           <tr>
             <th>Date</th>

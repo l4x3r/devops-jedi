@@ -6,7 +6,7 @@ import './NavMenu.css';
 export class NavMenu extends Component {
   static displayName = NavMenu.name;
 
-  constructor (props) {
+  constructor(props) {
     super(props);
 
     this.toggleNavbar = this.toggleNavbar.bind(this);
@@ -15,19 +15,19 @@ export class NavMenu extends Component {
     };
   }
 
-  toggleNavbar () {
+  toggleNavbar() {
     this.setState({
       collapsed: !this.state.collapsed
     });
   }
 
-  render () {
+  render() {
     return (
       <header>
         <Navbar color="dark" className="navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3" dark>
           <Container>
-                    <NavbarBrand tag={Link} to="/">DevOps Jedi - The force is strong!</NavbarBrand> 
-        <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+            <NavbarBrand tag={Link} to="/">DEVOPS JEDI - The force is strong!</NavbarBrand>
+            <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
             <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
               <ul className="navbar-nav flex-grow">
                 <NavItem>
@@ -37,7 +37,7 @@ export class NavMenu extends Component {
                   <NavLink tag={Link} className="text-light" to="/fetch-data">[Call BFF]</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink tag={Link} className="text-light" to="/fetch-data">[Call Deathstar API]</NavLink>
+                  <NavLink tag={Link} className="text-light" to="/fetch-data">[Call Deathstar API]</NavLink>
                 </NavItem>
               </ul>
             </Collapse>
