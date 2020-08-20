@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: devops-jedi
+spec:
+  destination:
+    namespace: devops-jedi
+    server: 'https://api.scbclu01.scbeval.net:6443'
+  source:
+    path: infrastructure
+    repoURL: 'https://github.com/scb-tomasmortensen/devops-jedi'
+    targetRevision: HEAD
+    directory:
+      recurse: true
+  project: default
+  syncPolicy:
+    automated:
+      automated:
+        prune: false
+        selfHeal: false
+    syncOptions: []

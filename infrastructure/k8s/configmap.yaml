@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: devops-jedi-config
+data:
+  config.json: |
+    {
+      "environment" : "dev"
+    }
+# kubectl create configmap devops-jedi-config --from-file ./xyz/configs/config.json
