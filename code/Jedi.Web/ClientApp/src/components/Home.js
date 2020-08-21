@@ -15,6 +15,12 @@ export class Home extends Component {
           <i>- Obi-Wan Kenobi</i>
         </p>
         <img src="./img/jedi-metal.png" height="200" alt="Jedi Symbol" />
+
+        <p>
+          <small>
+            NODE_ENV: {process.env.NODE_ENV}<br />
+            HOSTNAME: {process.env.HOSTNAME}</small>
+        </p>
       </div>
     );
   }
