@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: vsts-agent
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: vsts-agent
+        version: "0.1"
+    spec:
+      containers:
+      - name: vsts-agent
+        image: microsoft/vsts-agent:ubuntu-16.04-docker-18.06.1-ce-standard
+        env:
+          - name: VSTS_ACCOUNT
+            valueFrom:
+              secretKeyRef:
+                name: registry
+                key: VSTS_ACCOUNT
+          - name: VSTS_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: registry
+                key: VSTS_TOKEN
+          - name: VSTS_POOL
+            value: dockerized-agents
+          - name: TFS_URL
+            value: https://tfstest.scbeval.net/tfs
+        
