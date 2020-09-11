@@ -1,18 +1,29 @@
-apiVersion: v1
-kind: ReplicationController
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: azp-agent
+  labels:
+    app: azp-agent
+  annotations:
 spec:
+  selector:
+    matchLabels:
+      app: azp-agent
   replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
   template:
     metadata:
       labels:
         app: azp-agent
-        version: "0.1"
     spec:
       containers:
       - name: azp-agent
-        image: tomasmortensenscb/dockeragent:1.1.0
+        image: tomasmortensenscb/dockeragent:1.0.19
+        imagePullPolicy: IfNotPresent
         env:
           - name: AZP_ACCOUNT
             valueFrom:
@@ -24,10 +35,16 @@ spec:
               secretKeyRef:
                 name: azpagent
                 key: AZP_TOKEN
-          - name: AZP_POOL
+          - name: VSTS_POOL
             value: dockerized-agents
           - name: AZP_URL
-            value: https://tfstest.scbeval.net/tfs/SCB
+            value: https://tfstest.scbeval.net/tfs
           - name: AZP_AGENT_NAME
             value: azp-docker-ubuntu
-        
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "50m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
