@@ -13,13 +13,20 @@ RUN apt-get update \
     git \
     iputils-ping \
     libcurl4 \
+    libssl1.0.0 \
     libicu60 \
     libunwind8 \
-    netcat
+    netcat \
+    zip \
+    unzip
 
 WORKDIR /azp
 
+COPY ./.token .
 COPY ./start.sh .
 RUN chmod +x start.sh
+
+RUN mkdir agent
+RUN chmod -R 777 /azp
 
 CMD ["./start.sh"]
