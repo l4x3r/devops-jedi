@@ -18,6 +18,10 @@ kubectl create secret generic registry --from-literal=VSTS_TOKEN=Personal-Access
 ### Deploy Agent in K8s
 kubectl -n devops-jedi apply -f .\azp\agent.yaml
 
+### Weird but true!
+The reference to Azure DevOps Server in the agent.yaml called AZP_URL must include the collection. So https://tfstest.scbeval.net/tfs
+will not suffice, https://tfstest.scbeval.net/tfs/SCB works though... This is a little trippy since agent pools are server wide?
+
 ### Run containers as root in Openshift
 https://docs.openshift.com/enterprise/3.2/admin_guide/manage_scc.html
 oc adm policy add-scc-to-group anyuid system:authenticated
