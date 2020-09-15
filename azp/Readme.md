@@ -33,3 +33,13 @@ Remember that older version may have dependencies that were included in Ubuntu 1
 ### Shell-scripts rocks but...
 Everytime you make a change in the start.sh file remember that the linebreaks in the source repository will be CRLF. 
 Linux dont like that too much so a trick is to start Git Bash and run the command "dos2unix start.sh" before building the image.
+
+## Handle .NET Core SDK builds?
+Best is to use the Install .NET Core SDK task provided in Azure DevOps - though there are some troubles with version 0.*.
+I got it running using 1.* version of the task and specifying 3.x as the version. Kind good that this flexibility lays outside
+of the image.
+
+## Handle NPM and NodeJS builds?
+Hmm, this was not really as easy as .NET Core - there are npm tasks but both of them require NPM on the agent already...
+I found this post https://www.freecodecamp.org/news/how-to-install-node-js-on-ubuntu-and-update-npm-to-the-latest-version/
+Which calls for a tool called NVM that kan install different versions of Node that not necessarily need to be in the Ubuntu store..
