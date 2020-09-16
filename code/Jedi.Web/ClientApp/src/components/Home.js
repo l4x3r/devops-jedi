@@ -19,7 +19,7 @@ export class Home extends Component {
         <p>
           <small>
             NODE_ENV: {process.env.NODE_ENV}<br />
-            HOSTNAME: {process.env.HOSTNAME}</small> bohoo
+            HOSTNAME: {process.env.HOSTNAME}</small> Workshop
         </p>
       </div>
     );
