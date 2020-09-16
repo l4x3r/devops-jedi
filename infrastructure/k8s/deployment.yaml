@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: devops-jedi
-        image: tomasmortensenscb/devops-jedi-web:1.0.2
+        image: tomasmortensenscb/devops-jedi-web:1.0.3
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
